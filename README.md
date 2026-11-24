@@ -8,11 +8,20 @@
 
 > **[`Notebooks/Final/unified_food_delivery.ipynb`](Notebooks/Final/unified_food_delivery.ipynb)**
 
-Содержит постановку задачи, EDA, baseline, валидацию, подбор гиперпараметров и финальную оценку. Выполняется сверху вниз без вмешательств, все `random_state` зафиксированы (`RANDOM_STATE = 42`). Для проверки воспроизводимости:
+Содержит постановку задачи, EDA, baseline, валидацию, подбор гиперпараметров и финальную оценку. Выполняется сверху вниз без вмешательств, все `random_state` зафиксированы (`RANDOM_STATE = 42`). 
+
+Зависимости:
 
 ```
-jupyter nbconvert --to notebook --execute --inplace Notebooks/Final/unified_food_delivery.ipynb
+pip install optuna phik plotly scikit-learn pandas numpy
 ```
+
+Для проверки воспроизводимости (запуск из корня проекта):
+
+```
+python -m nbconvert --to notebook --execute --inplace Notebooks/Final/unified_food_delivery.ipynb
+```
+
 
 **Данные:** `Data/food_delivery_orders_dataset.csv` — 50 000 заказов, 37 столбцов (Kaggle: Food Delivery Orders & ETA Logistics Dataset).
 
